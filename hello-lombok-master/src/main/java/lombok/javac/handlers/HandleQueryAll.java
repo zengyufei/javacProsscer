@@ -208,7 +208,7 @@ public class HandleQueryAll extends JavacAnnotationHandler<QueryAll> {
         // Ebean.find(SysOrg.class)
         JCExpression objMethodSuccess = maker.Apply(List.<JCExpression>nil(), objMethod, List.<JCExpression>of(beanClass));
         // Ebean.find(SysOrg.class).findList
-        JCExpression findList = maker.Select(objMethodSuccess, typeNode.toName("findList"));
+        JCExpression findList = chainDots(typeNode, objMethodSuccess.toString(), "findList");
         // Ebean.find(SysOrg.class).findList()
         JCExpression findListEnd = maker.Apply(List.<JCExpression>nil(), findList, List.<JCExpression>nil());
         // java.util.List
@@ -216,7 +216,7 @@ public class HandleQueryAll extends JavacAnnotationHandler<QueryAll> {
         // java.util.List<SysOrg>
         JCExpression argLeftEnd = maker.TypeApply(argLeft, List.<JCExpression>of(chainDotsString(typeNode, beanClassName)));
         // java.util.List<SysOrg> = Ebean.find(SysOrg.class).findList();
-        JCVariableDecl listLeft = maker.VarDef(maker.Modifiers(Flags.PARAMETER), typeNode.toName("list"), argLeftEnd, findListEnd);
+        JCVariableDecl listLeft = maker.VarDef(maker.Modifiers(0), typeNode.toName("list"), argLeftEnd, findListEnd);
 
         // 设定返回值类型
         JCIdent list = maker.Ident(typeNode.toName("list"));

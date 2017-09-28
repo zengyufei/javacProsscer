@@ -12,8 +12,8 @@ public class Ebean {
 
 	public static void insert(Object obj){}
 	public static int delete(Class<?> beanType, Object id){return 0;}
-	public static <T> List<T> find(Class<T> beanType) {
-		return new ArrayList<>();
+	public static <T> Query<T> find(Class<T> beanType) {
+		return new Query();
 	}
 
 }
