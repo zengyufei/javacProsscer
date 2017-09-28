@@ -17,11 +17,23 @@
 
     <dependencies>
         <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>0.9.3</version>
-            <scope>provided</scope>
+            <version>1.14.8</version>
+           <!-- <scope>system</scope>
+            <systemPath>E:/dowork/lombok-master/dist/lombok.jar</systemPath>-->
         </dependency>
+
         <dependency>
             <groupId>org.mangosdk.spi</groupId>
             <artifactId>spi</artifactId>
