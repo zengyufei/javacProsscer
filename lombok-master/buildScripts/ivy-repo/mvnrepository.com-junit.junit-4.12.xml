@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+	<configurations>
+		<conf name="runtime" />
+		<conf name="sources" />
+	</configurations>
+	<publications>
+		<artifact conf="runtime" url="http://central.maven.org/maven2/junit/junit/4.12/junit-4.12.jar" />
+		<artifact type="zip" conf="sources" url="https://github.com/junit-team/junit4/archive/r4.12.zip" />
+	</publications>
+</ivy-module>

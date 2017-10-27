@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/after-delombok" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/after-ecj" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/before" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="guava-18.0" level="project" />
+    <orderEntry type="library" name="rt-openjdk6" level="project" />
+    <orderEntry type="library" name="dist" level="project" />
+    <orderEntry type="library" name="test" level="project" />
+    <orderEntry type="module" module-name="lombok-master" />
+    <orderEntry type="module" module-name="core" />
+  </component>
+</module>
